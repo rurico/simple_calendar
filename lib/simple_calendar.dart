@@ -73,9 +73,9 @@ class _SimpleCalendarState extends State<SimpleCalendar> {
     final event = widget.dayEvents.firstWhere((DayEventsAtom events) {
       return dateTime.isAtSameMomentAs(
         DateTime(
-          events.dateTime.year,
-          events.dateTime.month,
-          events.dateTime.day,
+          events.time.year,
+          events.time.month,
+          events.time.day,
         ),
       );
     }, orElse: () => null);

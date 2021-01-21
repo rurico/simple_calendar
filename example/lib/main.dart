@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> {
         dayEvents: <DayEventsAtom>[
           DayEventsAtom(
             count: 1,
-            dateTime: DateTime(2021, 1, 11),
+            time: DateTime(2021, 1, 11),
           )
         ],
       ),

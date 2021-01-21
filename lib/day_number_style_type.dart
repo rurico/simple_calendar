@@ -5,10 +5,10 @@ typedef DayNumberStyleFunction = DayNumberStyle Function(DateTime dateTime);
 
 class DayEventsAtom {
   final int count;
-  final DateTime dateTime;
+  final DateTime time;
   const DayEventsAtom({
     this.count,
-    this.dateTime,
+    this.time,
   });
 }
 
