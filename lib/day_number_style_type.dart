@@ -3,7 +3,7 @@ import 'dart:ui';
 typedef DaySelectedCallback = void Function(DateTime dateTime);
 typedef DayNumberStyleFunction = DayNumberStyle Function(DateTime dateTime);
 
-class DayEventsAtom {
+abstract class DayEventsAtom {
   final int count;
   final DateTime time;
   const DayEventsAtom({
