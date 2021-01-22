@@ -20,16 +20,32 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    final simpleCalendar = SimpleCalendar(
+      currentDateColor: Colors.blue,
+      highlightedDateColor: Colors.red[300],
+      dayEvents: <DayEvent>[
+        DayEvent(
+          count: 1,
+          time: DateTime(2021, 1, 11),
+        )
+      ],
+      daySelectedCallback: (dateTime) {
+        print(dateTime);
+      },
+    );
     return Scaffold(
       appBar: AppBar(title: const Text('Calendar')),
-      body: SimpleCalendar(
-        currentDateColor: Colors.blue,
-        highlightedDateColor: Colors.red[300],
-        dayEvents: <DayEventsAtom>[
-          DayEventsAtom(
-            count: 1,
-            time: DateTime(2021, 1, 11),
-          )
+      body: Column(
+        children: <Widget>[
+          Expanded(child: simpleCalendar),
+          SizedBox(
+            height: 100,
+            child: ListView(
+              children:
+                  List.generate(100, (index) => Text("List 2 Item $index"))
+                      .toList(),
+            ),
+          ),
         ],
       ),
     );

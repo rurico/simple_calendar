@@ -12,6 +12,15 @@ abstract class DayEventsAtom {
   });
 }
 
+class DayEvent extends DayEventsAtom {
+  final int count;
+  final DateTime time;
+  const DayEvent({
+    this.count,
+    this.time,
+  });
+}
+
 class DayNumberStyle {
   Color color;
   Color highlightedDateColor;
